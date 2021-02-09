@@ -2,8 +2,8 @@
 
 # set -e
 
-# profiles defined in our helm config
-custom_profiles="/etc/jupyterhub/config/custom.profiles"
+# all hub configuration
+config_values="/etc/jupyterhub/config/values.yaml"
 
 # output location
 profile_dir="/srv/jupyterhub/profiles.d"
@@ -21,7 +21,7 @@ while true ; do
 
 		if [ ! -d $profile_dir ]; then mkdir -p $profile_dir ; fi
 
-		profiles=`jq -r 'keys[]' ${custom_profiles}`
+		profiles=`cat ${config_values} | yq .custom.profiles | jq -r 'keys[]'`
 		echo profiles: ${profiles}
 
 		# write out email lists for each profile
