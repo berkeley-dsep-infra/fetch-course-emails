@@ -1,4 +1,4 @@
-aiohttp==3.7.3
+aiohttp==3.7.4
 yq==2.12.0
 git+https://github.com/ryanlovett/sis-cli.git@0e2295e
 git+https://github.com/ryanlovett/ucbhr.git@48975fb
