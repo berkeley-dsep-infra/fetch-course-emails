@@ -1,6 +1,8 @@
 fetch-course-emails
 -------------------
 
+(This is no longer used by DataHub. We obtain enrollment information through our CanvasOAuthenticator.)
+
 This container fetches the campus email addresses of students and instructors
 in specified UCB courses. It runs as a sidecar container alongside hubs
 provisioned by berkeley-dsep-infra/datahub.
